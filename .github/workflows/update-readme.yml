@@ -14,48 +14,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
       - name: Fetch recent activity
         id: fetch_activity
-        uses: actions/github-script@v6
+        uses: octokit/request-action@v2.x
         with:
-          script: |
-            const { Octokit } = require("@octokit/core");
-            const octokit = new Octokit({ auth: process.env.GH_TOKEN });
-
-            const events = await octokit.request('GET /users/{username}/events', {
-              username: 'rinoscronauta'
-            });
-
-            let activityMarkdown = "";
-            events.data.slice(0, 10).forEach(event => {
-              activityMarkdown += `- ${event.type} at ${event.repo.name}\n`;
-            });
-
-            return activityMarkdown;
+          route: GET /users/:username/events
+          username: rinoscronauta
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Update README
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const fs = require('fs');
-            const readmePath = './README.md';
-            const readmeContent = fs.readFileSync(readmePath, 'utf8');
-            const newReadmeContent = readmeContent.replace(
-              /<!--START_SECTION:activity-->[\s\S]*<!--END_SECTION:activity-->/,
-              `<!--START_SECTION:activity-->\n${steps.fetch_activity.outputs.result}\n<!--END_SECTION:activity-->`
-            );
-            fs.writeFileSync(readmePath, newReadmeContent);
-
-            const { execSync } = require('child_process');
-            execSync('git config --global user.email "rinoscronauta@gmail.com"');
-            execSync('git config --global user.name "rinoscronauta"');
-            execSync('git add README.md');
-            execSync('git commit -m "Update recent activity"');
-            execSync('git push');
+        run: |
+          recent_activity=$(echo "${{ steps.fetch_activity.outputs.data }}" | jq -r '.[] | "- \(.type) at [\(.repo.name)](https://github.com/\(.repo.name))"')
+          readme=$(cat README.md)
+          new_readme=$(echo "$readme" | sed -e "/<!--START_SECTION:activity-->/, /<!--END_SECTION:activity-->/c\\
+<!--START_SECTION:activity-->\\
+$recent_activity\\
+<!--END_SECTION:activity-->")
+          echo "$new_readme" > README.md
+          git config --global user.email "rinoscronauta@gmail.com"
+          git config --global user.name "rinoscronauta"
+          git add README.md
+          git commit -m "Update recent activity"
+          git push
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
