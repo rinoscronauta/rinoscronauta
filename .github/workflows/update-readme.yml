@@ -23,5 +23,5 @@ jobs:
         uses: teoxoy/gh-readme-stats@v1
         with:
           token: ${{ secrets.GH_TOKEN }}
-          username: yourusername
+          username: rinoscronauta
           include_private: true
