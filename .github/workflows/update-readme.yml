@@ -35,7 +35,7 @@ jobs:
 $recent_activity\\
 <!--END_SECTION:activity-->")
           echo "$new_readme" > README.md
-          git config --global user.email "youremail@example.com"
+          git config --global user.email "rinoscronauta@gmail.com"
           git config --global user.name "rinoscronauta"
           git add README.md
           git commit -m "Update recent activity"
