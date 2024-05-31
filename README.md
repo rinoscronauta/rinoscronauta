@@ -25,11 +25,11 @@ I am a Data Scientist with a passion for mathematics and data science.
 ## 🚀 Projects
 - [**Data Analysis Project**](https://github.com/yourusername/data-analysis-project): A comprehensive analysis of [specific dataset or problem].
 - [**Visualization Project**](https://github.com/yourusername/visualization-project): Visualizing complex data using R and Python.
-- [**Shiny Dashboard**](https://github.com/yourusername/shiny-dashboard): An interactive Shiny dashboard for real-time data visualization.
+- [**Shiny Dashboard**](https://github.com/yourusername/shiny-dashboard): An interactive Shiny dashboard for real-time data visualization. -->
 
 ## 📊 GitHub Stats
 ![Your Name's GitHub stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=radical) -->
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=radical)
 
 ## 🤝 Connect with me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/laura-rezzieri-gambera-52b527153)
