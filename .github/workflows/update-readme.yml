@@ -19,9 +19,43 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Generate README from recent activity
-        uses: teoxoy/gh-readme-stats@v1
+      - name: Fetch recent activity
+        id: fetch_activity
+        uses: actions/github-script@v6
         with:
-          token: ${{ secrets.GH_TOKEN }}
-          username: rinoscronauta
-          include_private: true
+          script: |
+            const { Octokit } = require("@octokit/core");
+            const octokit = new Octokit({ auth: process.env.GH_TOKEN });
+
+            const events = await octokit.request('GET /users/{username}/events', {
+              username: 'rinoscronauta'
+            });
+
+            let activityMarkdown = "";
+            events.data.slice(0, 10).forEach(event => {
+              activityMarkdown += `- ${event.type} at ${event.repo.name}\n`;
+            });
+
+            return activityMarkdown;
+
+      - name: Update README
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const readmePath = './README.md';
+            const readmeContent = fs.readFileSync(readmePath, 'utf8');
+            const newReadmeContent = readmeContent.replace(
+              /<!--START_SECTION:activity-->[\s\S]*<!--END_SECTION:activity-->/,
+              `<!--START_SECTION:activity-->\n${steps.fetch_activity.outputs.result}\n<!--END_SECTION:activity-->`
+            );
+            fs.writeFileSync(readmePath, newReadmeContent);
+
+            const { execSync } = require('child_process');
+            execSync('git config --global user.email "rinoscronauta@gmail.com"');
+            execSync('git config --global user.name "rinoscronauta"');
+            execSync('git add README.md');
+            execSync('git commit -m "Update recent activity"');
+            execSync('git push');
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
