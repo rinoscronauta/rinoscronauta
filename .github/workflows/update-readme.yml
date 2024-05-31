@@ -14,6 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set up JQ
+        run: sudo apt-get install jq
+
       - name: Fetch recent activity
         id: fetch_activity
         uses: octokit/request-action@v2.x
@@ -25,14 +28,14 @@ jobs:
 
       - name: Update README
         run: |
-          recent_activity=$(echo "${{ steps.fetch_activity.outputs.data }}" | jq -r '.[] | "- \(.type) at [\(.repo.name)](https://github.com/\(.repo.name))"')
+          recent_activity=$(echo '${{ steps.fetch_activity.outputs.data }}' | jq -r '.[] | "- \(.type) at [\(.repo.name)](https://github.com/\(.repo.name))"')
           readme=$(cat README.md)
           new_readme=$(echo "$readme" | sed -e "/<!--START_SECTION:activity-->/, /<!--END_SECTION:activity-->/c\\
 <!--START_SECTION:activity-->\\
 $recent_activity\\
 <!--END_SECTION:activity-->")
           echo "$new_readme" > README.md
-          git config --global user.email "rinoscronauta@gmail.com"
+          git config --global user.email "youremail@example.com"
           git config --global user.name "rinoscronauta"
           git add README.md
           git commit -m "Update recent activity"
