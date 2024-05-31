@@ -1,4 +1,4 @@
-name: Update README with recent activity
+name: Update README with GitHub stats
 
 on:
   schedule:
@@ -7,38 +7,28 @@ on:
 
 jobs:
   update-readme:
-    name: Update this repo's README
+    name: Update this repo's README with GitHub stats
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up JQ
-        run: sudo apt-get install jq
-
-      - name: Fetch recent activity
-        id: fetch_activity
-        uses: octokit/request-action@v2.x
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          route: GET /users/:username/events
-          username: rinoscronauta
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          node-version: '14'
 
-      - name: Update README
+      - name: Install required packages
+        run: npm install -g github-stats-card
+
+      - name: Update README with GitHub stats
+        run: github-stats-card --username rinoscronauta --theme default --cache --output README.md
+
+      - name: Commit changes
         run: |
-          recent_activity=$(echo '${{ steps.fetch_activity.outputs.data }}' | jq -r '.[] | "- \(.type) at [\(.repo.name)](https://github.com/\(.repo.name))"')
-          readme=$(cat README.md)
-          new_readme=$(echo "$readme" | sed -e "/<!--START_SECTION:activity-->/, /<!--END_SECTION:activity-->/c\\
-<!--START_SECTION:activity-->\\
-$recent_activity\\
-<!--END_SECTION:activity-->")
-          echo "$new_readme" > README.md
-          git config --global user.email "rinoscronauta@gmail.com"
-          git config --global user.name "rinoscronauta"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "Update recent activity"
+          git commit -m "Update README with GitHub stats"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
