@@ -9,10 +9,19 @@ jobs:
   update-readme:
     name: Update this repo's README
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: gautamkrishnar/blog-post-workflow@v1.2.0
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          feed_list: "https://github.com/yourusername.private.atom?token=YOUR_TOKEN"
-          readme_path: "README.md"
-          gh_token: ${{ secrets.GH_TOKEN }}
+          node-version: '14'
+
+      - name: Generate README from recent activity
+        uses: teoxoy/gh-readme-stats@v1
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          username: yourusername
+          include_private: true
