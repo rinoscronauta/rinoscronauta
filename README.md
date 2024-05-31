@@ -28,8 +28,8 @@ I am a Data Scientist with a passion for mathematics and data science.
 - [**Shiny Dashboard**](https://github.com/yourusername/shiny-dashboard): An interactive Shiny dashboard for real-time data visualization. -->
 
 ## 📊 GitHub Stats
-![Your Name's GitHub stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=radical)
+![Your Name's GitHub stats](https://github-readme-stats.vercel.app/api?username=rinoscronauta&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rinoscronauta&layout=compact&theme=radical)
 
 ## 🤝 Connect with me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/laura-rezzieri-gambera-52b527153)
