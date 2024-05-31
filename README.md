@@ -28,13 +28,14 @@ I am a Data Scientist with a passion for mathematics and data science.
 - [**Shiny Dashboard**](https://github.com/yourusername/shiny-dashboard): An interactive Shiny dashboard for real-time data visualization. -->
 
 ## 📊 GitHub Stats
-![Your Name's GitHub stats](https://github-readme-stats.vercel.app/api?username=rinoscronauta&show_icons=true&include_all_commits=true&count_private=true&theme=radical)
+![Rinoscronauta's GitHub stats](https://github-readme-stats.vercel.app/api?username=rinoscronauta&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=onedark&locale=en&hide_border=false)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rinoscronauta&layout=compact&theme=radical)
 
 ## 🤝 Connect with me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/laura-rezzieri-gambera-52b527153)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:laura.rgambera@gmail.com)
-
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
 
 <!--
 **rinoscronauta/rinoscronauta** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
