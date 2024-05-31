@@ -34,8 +34,6 @@ I am a Data Scientist with a passion for mathematics and data science.
 ## 🤝 Connect with me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/laura-rezzieri-gambera-52b527153)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:laura.rgambera@gmail.com)
-<!--START_SECTION:activity-->
-<!--END_SECTION:activity-->
 
 <!--
 **rinoscronauta/rinoscronauta** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
