@@ -28,7 +28,7 @@ I am a Data Scientist with a passion for mathematics and data science.
 - [**Shiny Dashboard**](https://github.com/yourusername/shiny-dashboard): An interactive Shiny dashboard for real-time data visualization. -->
 
 ## 📊 GitHub Stats
-![Your Name's GitHub stats](https://github-readme-stats.vercel.app/api?username=rinoscronauta&show_icons=true&theme=radical)
+![Your Name's GitHub stats](https://github-readme-stats.vercel.app/api?username=rinoscronauta&show_icons=true&include_all_commits=true&count_private=true&theme=radical)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rinoscronauta&layout=compact&theme=radical)
 
 ## 🤝 Connect with me
