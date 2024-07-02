@@ -12,11 +12,13 @@ I am a Data Scientist with a passion for mathematics and data science.
 
 ## 🛠 Skills
 - **Mathematics**: Advanced mathematical concepts and statistical analysis.
-- **Languages**: 
+- **Languages**:
+  
   ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
   ![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
   ![Julia](https://img.shields.io/badge/Julia-9558B2?style=for-the-badge&logo=julia&logoColor=white)
-- **Tools and Technologies**: 
+- **Tools and Technologies**:
+  
   ![Shiny](https://img.shields.io/badge/Shiny-276DC3?style=for-the-badge&logo=r&logoColor=white)
   ![Quarto](https://img.shields.io/badge/Quarto-5C3EE8?style=for-the-badge&logo=quarto&logoColor=white)
   ![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
