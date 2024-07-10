@@ -1,53 +1,51 @@
-# Hi there 👋, I'm Laura
+<h1 align="center">Hi there 👋, I'm Laura</h1>
 
-<!-- ![Profile views](https://komarev.com/ghpvc/?username=yourusername&color=blue) -->
+###
 
-## About Me
-I am a Data Scientist with a passion for mathematics and data science.
+<h3 align="left">👩‍💻  About Me</h3>
 
-<!-- - 🔭 I’m currently working on [Your Current Project]
-- 🌱 I’m currently learning [New Technologies or Skills]
-- 💬 Ask me about math, data analysis, and statistical modeling
-- 📫 How to reach me: [Your Email/LinkedIn] -->
+###
 
-## 🛠 Skills
-- **Mathematics**: Advanced mathematical concepts and statistical analysis.
-- **Languages**:
-  
-  ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-  ![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-  ![Julia](https://img.shields.io/badge/Julia-9558B2?style=for-the-badge&logo=julia&logoColor=white)
-- **Tools and Technologies**:
-  
-  ![Shiny](https://img.shields.io/badge/Shiny-276DC3?style=for-the-badge&logo=r&logoColor=white)
-  ![Quarto](https://img.shields.io/badge/Quarto-5C3EE8?style=for-the-badge&logo=quarto&logoColor=white)
-  ![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+<p align="left">I am a Data Scientist with a passion for mathematics and data science.</p>
 
-<!--
-## 🚀 Projects
-- [**Data Analysis Project**](https://github.com/yourusername/data-analysis-project): A comprehensive analysis of [specific dataset or problem].
-- [**Visualization Project**](https://github.com/yourusername/visualization-project): Visualizing complex data using R and Python.
-- [**Shiny Dashboard**](https://github.com/yourusername/shiny-dashboard): An interactive Shiny dashboard for real-time data visualization. -->
+###
 
-## 📊 GitHub Stats
- ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=rinoscronauta&show_icons=true&count_private=true&theme=radical&hide=prs,issues&hide_title=true&hide_border=true&include_all_commits=true&bg_color=0F0F0F&token=${GH_TOKEN})
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=rinoscronauta&layout=compact&theme=radical&bg_color=0F0F0F&hide_border=true&token=${GH_TOKEN})
+<h3 align="left">🛠 Language and tools</h3>
 
-## 🤝 Connect with me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/laura-rezzieri-gambera-52b527153)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:laura.rgambera@gmail.com)
+###
 
-<!--
-**rinoscronauta/rinoscronauta** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" height="40" alt="latex logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" height="40" alt="r logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" height="40" alt="sqlite logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/julia/julia-original.svg" height="40" alt="julia logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" height="40" alt="jupyter logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg" height="40" alt="rstudio logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" height="40" alt="pandas logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="40" alt="tensorflow logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" height="40" alt="pytorch logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" height="40" alt="markdown logo"  />
+</div>
 
-Here are some ideas to get you started:
+###
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<h3 align="left">🔥   My Stats :</h3>
+
+###
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=rinoscronauta&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5&order=3" height="220" alt="streak graph"  />
+</div>
+
+###
