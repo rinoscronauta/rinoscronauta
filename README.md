@@ -44,8 +44,27 @@
 
 ###
 
-<div align="center">
-  <img src="https://streak-stats.demolab.com?user=rinoscronauta&locale=en&mode=daily&theme=dark&hide_border=false&border_radius=5&order=3" height="220" alt="streak graph"  />
+<div align="center" style="background-color: #222; padding: 20px; border-radius: 10px; color: #fff;">
+  <table>
+    <tr>
+      <td align="center" style="padding: 10px;">
+        <span style="font-size: 24px; font-weight: bold;">{{ total_contribuicoes }}</span><br>
+        <span>Total Contributions</span><br>
+        <span style="font-size: 12px;">{{ data_inicio_contribuicoes }} - Present</span>
+      </td>
+      <td align="center" style="padding: 10px;">
+        <span style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥 {{ streak_atual }}</span><br>
+        <span>Current Streak</span><br>
+        <span style="font-size: 12px;">{{ data_inicio_streak_atual }} - {{ data_fim_streak_atual }}</span>
+      </td>
+      <td align="center" style="padding: 10px;">
+        <span style="font-size: 24px; font-weight: bold;">{{ streak_maximo }}</span><br>
+        <span>Longest Streak</span><br>
+        <span style="font-size: 12px;">{{ data_inicio_streak_maximo }} - {{ data_fim_streak_maximo }}</span>
+      </td>
+    </tr>
+  </table>
 </div>
+
 
 ###
