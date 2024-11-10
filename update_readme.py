@@ -7,7 +7,7 @@ GITHUB_TOKEN = os.getenv("GH_TOKEN")
 USERNAME = 'rinoscronauta'
 
 # configurações da API
-headers = {"Authorization": f"Bearer {GITHUB_TOKEN}"}
+headers = {"Authorization": f"token {GITHUB_TOKEN}"}
 query = """
 query($username: String!) {
   user(login: $username) {
