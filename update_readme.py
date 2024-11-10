@@ -126,14 +126,14 @@ with open("README.md", "r") as file:
     readme_content = file.read()
 
 # Substituir valores
-readme_content = readme_content.replace("{{ streak['total_contribuicoes'] }}", str(total_contribuicoes))
-readme_content = readme_content.replace("{{ streak['streak_atual'] }}", str(streak_atual))
-readme_content = readme_content.replace("{{ streak['streak_maximo'] }}", str(streak_maximo))
-readme_content = readme_content.replace("{{ streak['data_inicio_contribuicoes'] }}", data_inicio_contribuicoes)
-readme_content = readme_content.replace("{{ streak['data_inicio_streak_atual'] }}", data_inicio_streak_atual)
-readme_content = readme_content.replace("{{ streak['data_fim_streak_atual'] }}", data_fim_streak_atual)
-readme_content = readme_content.replace("{{ streak['data_inicio_streak_maximo'] }}", data_inicio_streak_maximo)
-readme_content = readme_content.replace("{{ streak['data_fim_streak_maximo'] }}", data_fim_streak_maximo)
+readme_content = readme_content.replace("{{ total_contribuicoes }}", str(streak['total_contribuicoes']))
+readme_content = readme_content.replace("{{ streak_atual }}", str(streak['streak_atual']))
+readme_content = readme_content.replace("{{ streak_maximo }}", str(streak['streak_maximo']))
+readme_content = readme_content.replace("{{ data_inicio_contribuicoes }}", str(streak['data_inicio_contribuicoes']))
+readme_content = readme_content.replace("{{ data_inicio_streak_atual }}", str(streak['data_inicio_streak_atual']))
+readme_content = readme_content.replace("{{ data_fim_streak_atual }}", str(streak['data_fim_streak_atual']))
+readme_content = readme_content.replace("{{ data_inicio_streak_maximo }}", str(streak['data_inicio_streak_maximo']))
+readme_content = readme_content.replace("{{ data_fim_streak_maximo }}", str(streak['data_fim_streak_maximo']))
 
 # Salvar o README.md atualizado
 with open("README.md", "w") as file:
