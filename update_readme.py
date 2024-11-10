@@ -3,7 +3,7 @@ import os
 import datetime
 import re
 
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GITHUB_TOKEN = os.getenv("GH_TOKEN")
 USERNAME = 'rinoscronauta'
 
 # configurações da API
