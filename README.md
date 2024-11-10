@@ -48,17 +48,17 @@
   <table>
     <tr>
       <td align="center" style="padding: 10px;">
-        <span style="font-size: 24px; font-weight: bold;">635</span><br>
+        <h2 style="font-size: 30px; font-weight: bold;">635</span></h2>
         <span>Total Contributions</span><br>
         <span style="font-size: 12px;">2023-11-12 - Present</span>
       </td>
       <td align="center" style="padding: 10px;">
-        <span style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥 81</span><br>
+        <h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥 81</span></h2>
         <span>Current Streak</span><br>
         <span style="font-size: 12px;">2024-08-12 - 2024-11-10</span>
       </td>
       <td align="center" style="padding: 10px;">
-        <span style="font-size: 24px; font-weight: bold;">81</span><br>
+        <h2 style="font-size: 24px; font-weight: bold;">81</span></h2>
         <span>Longest Streak</span><br>
         <span style="font-size: 12px;">2024-08-12 - 2024-11-10</span>
       </td>
