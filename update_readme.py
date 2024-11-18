@@ -118,7 +118,7 @@ def calculate_tolerant_streak(contributions, tolerance=1):
 
 # Executa a função
 contributions = fetch_contributions()
-streak = calculate_tolerant_streak(contributions, tolerance=2)
+streak = calculate_tolerant_streak(contributions, tolerance=3)
 print(streak)
 
 # Carregar README.md e substituir os placeholders
