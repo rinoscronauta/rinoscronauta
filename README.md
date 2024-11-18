@@ -48,25 +48,25 @@
   <table>
     <tr>
       <td align="center" style="padding: 10px;">
-        <!-- {{ total_contribuicoes }} -->
-        <h2 style="font-size: 30px; font-weight: bold;">{{ total_contribuicoes }}</h2>
+        <!-- 631 -->
+        <h2 style="font-size: 30px; font-weight: bold;">631</h2>
         <span>Total Contributions</span><br>
-        <!-- {{ data_inicio_contribuicoes }} -->
-        <span style="font-size: 12px;">{{ data_inicio_contribuicoes }}  - Present</span>
+        <!-- 2023-11-19 -->
+        <span style="font-size: 12px;">2023-11-19  - Present</span>
       </td>
       <td align="center" style="padding: 10px;">
-        <!-- {{ streak_atual }} -->
-        <h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥 {{ streak_atual }}</h2>
+        <!-- 🔥 86 -->
+        <h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥 🔥 86</h2>
         <span>Current Streak</span><br>
-        <!-- {{ data_inicio_streak_atual }} {{ data_fim_streak_atual }} -->
-        <span style="font-size: 12px;">{{ data_inicio_streak_atual }} - {{ data_fim_streak_atual }}</span>
+        <!-- 2024-08-12 2024-11-18 -->
+        <span style="font-size: 12px;">2024-08-12 - 2024-11-18</span>
       </td>
       <td align="center" style="padding: 10px;">
-        <!-- {{ streak_maximo }} -->
-        <h2 style="font-size: 24px; font-weight: bold;">{{ streak_maximo }}</h2>
+        <!-- 86 -->
+        <h2 style="font-size: 24px; font-weight: bold;">86</h2>
         <span>Longest Streak</span><br>
-        <!-- {{ data_inicio_streak_maximo }} {{ data_fim_streak_maximo }} -->
-        <span style="font-size: 12px;">{{ data_inicio_streak_maximo }} - {{ data_fim_streak_maximo }}</span>
+        <!-- 2024-08-12 2024-11-18 -->
+        <span style="font-size: 12px;">2024-08-12 - 2024-11-18</span>
       </td>
     </tr>
   </table>
