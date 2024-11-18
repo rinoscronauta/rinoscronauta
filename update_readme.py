@@ -140,7 +140,7 @@ readme_content = readme_content.replace("{{ streak_atual }}", f"🔥 {streak['st
 readme_content = readme_content.replace("{{ streak_maximo }}", str(streak['streak_maximo']))
 # Converter automaticamente todos os campos de data para string
 for key in streak:
-    if isinstance(streak[key], date):  # Verifica se o valor é uma data
+    if isinstance(streak[key], datetime.date):  # Verifica se o valor é uma data
         streak[key] = streak[key].strftime("%Y-%m-%d")
 # Substituir os placeholders
 readme_content = readme_content.replace("{{ data_inicio_contribuicoes }}", streak['data_inicio_contribuicoes'])
