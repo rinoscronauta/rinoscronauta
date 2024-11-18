@@ -125,15 +125,24 @@ print(streak)
 with open("README.md", "r") as file:
     readme_content = file.read()
 
-# Substituir valores
+# 1. Restaurar os placeholders dinamicamente com regex
+# Exemplo de correspondências genéricas para números e datas
+readme_content = re.sub(r"<h2 style=\".*?\">(\d+)</h2>", "{{ total_contribuicoes }}", readme_content, count=1)
+readme_content = re.sub(r"<h2 style=\".*?\">🔥 (\d+)</h2>", "{{ streak_atual }}", readme_content, count=1)
+readme_content = re.sub(r"<h2 style=\".*?\">(\d+)</h2>", "{{ streak_maximo }}", readme_content, count=1)
+readme_content = re.sub(r"(\d{4}-\d{2}-\d{2}) - Present", "{{ data_inicio_contribuicoes }} - Present", readme_content)
+readme_content = re.sub(r"(\d{4}-\d{2}-\d{2}) - (\d{4}-\d{2}-\d{2})", "{{ data_inicio_streak_atual }} - {{ data_fim_streak_atual }}", readme_content, count=1)
+readme_content = re.sub(r"(\d{4}-\d{2}-\d{2}) - (\d{4}-\d{2}-\d{2})", "{{ data_inicio_streak_maximo }} - {{ data_fim_streak_maximo }}", readme_content, count=1)
+
+# 2. Substituir os placeholders pelos valores atualizados
 readme_content = readme_content.replace("{{ total_contribuicoes }}", str(streak['total_contribuicoes']))
-readme_content = readme_content.replace("{{ streak_atual }}", str(streak['streak_atual']))
+readme_content = readme_content.replace("{{ streak_atual }}", f"🔥 {streak['streak_atual']}")
 readme_content = readme_content.replace("{{ streak_maximo }}", str(streak['streak_maximo']))
-readme_content = readme_content.replace("{{ data_inicio_contribuicoes }}", str(streak['data_inicio_contribuicoes']))
-readme_content = readme_content.replace("{{ data_inicio_streak_atual }}", str(streak['data_inicio_streak_atual']))
-readme_content = readme_content.replace("{{ data_fim_streak_atual }}", str(streak['data_fim_streak_atual']))
-readme_content = readme_content.replace("{{ data_inicio_streak_maximo }}", str(streak['data_inicio_streak_maximo']))
-readme_content = readme_content.replace("{{ data_fim_streak_maximo }}", str(streak['data_fim_streak_maximo']))
+readme_content = readme_content.replace("{{ data_inicio_contribuicoes }}", streak['data_inicio_contribuicoes'])
+readme_content = readme_content.replace("{{ data_inicio_streak_atual }}", streak['data_inicio_streak_atual'])
+readme_content = readme_content.replace("{{ data_fim_streak_atual }}", streak['data_fim_streak_atual'])
+readme_content = readme_content.replace("{{ data_inicio_streak_maximo }}", streak['data_inicio_streak_maximo'])
+readme_content = readme_content.replace("{{ data_fim_streak_maximo }}", streak['data_fim_streak_maximo'])
 
 # Salvar o README.md atualizado
 with open("README.md", "w") as file:
