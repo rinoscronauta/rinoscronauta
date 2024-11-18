@@ -138,6 +138,11 @@ readme_content = re.sub(r"(\d{4}-\d{2}-\d{2}) - (\d{4}-\d{2}-\d{2})", "{{ data_i
 readme_content = readme_content.replace("{{ total_contribuicoes }}", str(streak['total_contribuicoes']))
 readme_content = readme_content.replace("{{ streak_atual }}", f"🔥 {streak['streak_atual']}")
 readme_content = readme_content.replace("{{ streak_maximo }}", str(streak['streak_maximo']))
+# Converter automaticamente todos os campos de data para string
+for key in streak:
+    if isinstance(streak[key], date):  # Verifica se o valor é uma data
+        streak[key] = streak[key].strftime("%Y-%m-%d")
+# Substituir os placeholders
 readme_content = readme_content.replace("{{ data_inicio_contribuicoes }}", streak['data_inicio_contribuicoes'])
 readme_content = readme_content.replace("{{ data_inicio_streak_atual }}", streak['data_inicio_streak_atual'])
 readme_content = readme_content.replace("{{ data_fim_streak_atual }}", streak['data_fim_streak_atual'])
