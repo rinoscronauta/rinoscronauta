@@ -49,7 +49,7 @@
     <tr>
       <td align="center" style="padding: 10px;">
         <!-- 631 -->
-        <h2 style="font-size: 30px; font-weight: bold;">631</h2>
+        637
         <span>Total Contributions</span><br>
         <!-- 2023-11-19 -->
         <span style="font-size: 12px;">2023-11-19  - Present</span>
@@ -63,7 +63,7 @@
       </td>
       <td align="center" style="padding: 10px;">
         <!-- 86 -->
-        <h2 style="font-size: 24px; font-weight: bold;">86</h2>
+        87
         <span>Longest Streak</span><br>
         <!-- 2024-08-12 2024-11-18 -->
         <span style="font-size: 12px;">2024-08-12 - 2024-11-18</span>
