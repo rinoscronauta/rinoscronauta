@@ -136,7 +136,7 @@ readme_content = re.sub(r"(\d{4}-\d{2}-\d{2}) - (\d{4}-\d{2}-\d{2})", "{{ data_i
 
 # 2. Substituir os placeholders pelos valores atualizados
 readme_content = readme_content.replace("{{ total_contribuicoes }}", str(streak['total_contribuicoes']))
-readme_content = readme_content.replace("{{ streak_atual }}", f"🔥 {streak['streak_atual']}")
+readme_content = readme_content.replace("{{ streak_atual }}", str(streak['streak_atual']))
 readme_content = readme_content.replace("{{ streak_maximo }}", str(streak['streak_maximo']))
 # Converter automaticamente todos os campos de data para string
 for key in streak:
