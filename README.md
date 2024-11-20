@@ -56,17 +56,17 @@
       </td>
       <td align="center" style="padding: 10px;">
         <!-- 🔥 86 -->
-        <h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥 86</h2>
+        89
         <span>Current Streak</span><br>
         <!-- 2024-08-12 2024-11-18 -->
-        <span style="font-size: 12px;">2024-08-12 - 2024-11-19</span>
+        <span style="font-size: 12px;">2024-08-12 - 2024-11-20</span>
       </td>
       <td align="center" style="padding: 10px;">
         <!-- 86 -->
         <h2 style="font-size: 24px; font-weight: bold; color: #FFA500;"> 87 </h2>
         <span>Longest Streak</span><br>
         <!-- 2024-08-12 2024-11-18 -->
-        <span style="font-size: 12px;">2024-08-12 - 2024-11-19</span>
+        <span style="font-size: 12px;">2024-08-12 - 2024-11-20</span>
       </td>
     </tr>
   </table>
