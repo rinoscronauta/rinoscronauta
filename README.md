@@ -49,24 +49,24 @@
     <tr>
       <td align="center" style="padding: 10px;">
         <!-- placeholder_total_contribuicoes -->
-        <h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🎯&nbsp;637</h2>
+<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🎯&nbsp;636</h2>
         <span>Total Contributions</span><br>
         <!-- placeholder_data_inicio_contribuicoes -->
-        <span style="font-size: 12px;">📅&nbsp;2023-11-19 - Present</span>
+<span style="font-size: 12px;">📅&nbsp;2023-11-26 - Present</span>
       </td>
       <td align="center" style="padding: 10px;">
         <!-- placeholder_streak_atual -->
-        <h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥&nbsp;89</h2>
+<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥&nbsp;92</h2>
         <span>Current Streak</span><br>
         <!-- placeholder_data_inicio_streak_atual --> <!-- placeholder_data_fim_streak_atual -->
-        <span style="font-size: 12px;">📅&nbsp;2024-08-12 - 2024-11-23</span>
+<span style="font-size: 12px;">📅&nbsp;2024-08-12 - 2024-11-24</span>
       </td>
       <td align="center" style="padding: 10px;">
         <!-- placeholder_streak_maximo -->
-        <h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🏆&nbsp;87</h2>
+<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🏆&nbsp;92</h2>
         <span>Longest Streak</span><br>
         <!-- placeholder_data_inicio_streak_maximo --> <!-- placeholder_data_fim_streak_maximo -->
-        <span style="font-size: 12px;">⏳&nbsp;2024-08-12 - 2024-11-23</span>
+<span style="font-size: 12px;">⏳&nbsp;2024-08-12 - 2024-11-24</span>
       </td>
     </tr>
   </table>
