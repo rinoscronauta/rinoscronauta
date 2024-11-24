@@ -121,34 +121,54 @@ contributions = fetch_contributions()
 streak = calculate_tolerant_streak(contributions, tolerance=3)
 print(streak)
 
-# Carregar README.md e substituir os placeholders
-with open("README.md", "r") as file:
-    readme_content = file.read()
+# Caminho do README
+readme_path = "README.md"
 
-# 1. Restaurar os placeholders dinamicamente com regex
-# Exemplo de correspondências genéricas para números e datas
-readme_content = re.sub(r"<h2 style=\".*?\">(\d+)</h2>", "{{ total_contribuicoes }}", readme_content, count=1)
-readme_content = re.sub(r"<h2 style=\".*?\">🔥 (\d+)</h2>", "{{ streak_atual }}", readme_content, count=1)
-readme_content = re.sub(r"<h2 style=\".*?\">(\d+)</h2>", "{{ streak_maximo }}", readme_content, count=1)
-readme_content = re.sub(r"(\d{4}-\d{2}-\d{2}) - Present", "{{ data_inicio_contribuicoes }} - Present", readme_content)
-readme_content = re.sub(r"(\d{4}-\d{2}-\d{2}) - (\d{4}-\d{2}-\d{2})", "{{ data_inicio_streak_atual }} - {{ data_fim_streak_atual }}", readme_content, count=1)
-readme_content = re.sub(r"(\d{4}-\d{2}-\d{2}) - (\d{4}-\d{2}-\d{2})", "{{ data_inicio_streak_maximo }} - {{ data_fim_streak_maximo }}", readme_content, count=1)
+def atualizar_readme(streak, readme_path):
+    # Leia o conteúdo atual do README
+    with open(readme_path, "r", encoding="utf-8") as file:
+        readme_content = file.read()
 
-# 2. Substituir os placeholders pelos valores atualizados
-readme_content = readme_content.replace("{{ total_contribuicoes }}", str(streak['total_contribuicoes']))
-readme_content = readme_content.replace("{{ streak_atual }}", str(streak['streak_atual']))
-readme_content = readme_content.replace("{{ streak_maximo }}", str(streak['streak_maximo']))
-# Converter automaticamente todos os campos de data para string
-for key in streak:
-    if isinstance(streak[key], datetime.date):  # Verifica se o valor é uma data
-        streak[key] = streak[key].strftime("%Y-%m-%d")
-# Substituir os placeholders
-readme_content = readme_content.replace("{{ data_inicio_contribuicoes }}", streak['data_inicio_contribuicoes'])
-readme_content = readme_content.replace("{{ data_inicio_streak_atual }}", streak['data_inicio_streak_atual'])
-readme_content = readme_content.replace("{{ data_fim_streak_atual }}", streak['data_fim_streak_atual'])
-readme_content = readme_content.replace("{{ data_inicio_streak_maximo }}", streak['data_inicio_streak_maximo'])
-readme_content = readme_content.replace("{{ data_fim_streak_maximo }}", streak['data_fim_streak_maximo'])
+    # Substituir os placeholders
+    readme_content = re.sub(
+        r"<!-- placeholder_total_contribuicoes -->\s*<h2.*?>.*?</h2>",
+        f'<!-- placeholder_total_contribuicoes -->\n<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🎯&nbsp;{streak["total_contribuicoes"]}</h2>',
+        readme_content
+    )
 
-# Salvar o README.md atualizado
-with open("README.md", "w") as file:
-    file.write(readme_content)
+    readme_content = re.sub(
+        r"<!-- placeholder_data_inicio_contribuicoes -->\s*<span.*?>.*?</span>",
+        f'<!-- placeholder_data_inicio_contribuicoes -->\n<span style="font-size: 12px;">📅&nbsp;{streak["data_inicio_contribuicoes"]} - Present</span>',
+        readme_content
+    )
+
+    readme_content = re.sub(
+        r"<!-- placeholder_streak_atual -->\s*<h2.*?>.*?</h2>",
+        f'<!-- placeholder_streak_atual -->\n<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥&nbsp;{streak["streak_atual"]}</h2>',
+        readme_content
+    )
+
+    readme_content = re.sub(
+        r"<!-- placeholder_data_inicio_streak_atual -->.*?<!-- placeholder_data_fim_streak_atual -->\s*<span.*?>.*?</span>",
+        f'<!-- placeholder_data_inicio_streak_atual --> <!-- placeholder_data_fim_streak_atual -->\n<span style="font-size: 12px;">📅&nbsp;{streak["data_inicio_streak_atual"]} - {streak["data_fim_streak_atual"]}</span>',
+        readme_content
+    )
+
+    readme_content = re.sub(
+        r"<!-- placeholder_streak_maximo -->\s*<h2.*?>.*?</h2>",
+        f'<!-- placeholder_streak_maximo -->\n<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🏆&nbsp;{streak["streak_maximo"]}</h2>',
+        readme_content
+    )
+
+    readme_content = re.sub(
+        r"<!-- placeholder_data_inicio_streak_maximo -->.*?<!-- placeholder_data_fim_streak_maximo -->\s*<span.*?>.*?</span>",
+        f'<!-- placeholder_data_inicio_streak_maximo --> <!-- placeholder_data_fim_streak_maximo -->\n<span style="font-size: 12px;">⏳&nbsp;{streak["data_inicio_streak_maximo"]} - {streak["data_fim_streak_maximo"]}</span>',
+        readme_content
+    )
+
+    # Salvar o conteúdo atualizado no README
+    with open(readme_path, "w", encoding="utf-8") as file:
+        file.write(readme_content)
+
+# Atualizar o README com os valores dinâmicos
+atualizar_readme(streak, readme_path)
