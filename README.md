@@ -56,10 +56,10 @@
       </td>
       <td align="center" style="padding: 10px;">
         <!-- placeholder_streak_atual -->
-<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥&nbsp;111</h2>
+<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🔥&nbsp;0</h2>
         <span>Current Streak</span><br>
         <!-- placeholder_data_inicio_streak_atual --> <!-- placeholder_data_fim_streak_atual -->
-<span style="font-size: 12px;">📅&nbsp;2024-08-12 - 2024-12-30</span>
+<span style="font-size: 12px;">📅&nbsp;None - None</span>
       </td>
       <td align="center" style="padding: 10px;">
         <!-- placeholder_streak_maximo -->
