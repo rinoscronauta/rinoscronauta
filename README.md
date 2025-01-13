@@ -49,10 +49,10 @@
     <tr>
       <td align="center" style="padding: 10px;">
         <!-- placeholder_total_contribuicoes -->
-<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🎯&nbsp;549</h2>
+<h2 style="font-size: 24px; font-weight: bold; color: #FFA500;">🎯&nbsp;531</h2>
         <span>Total Contributions</span><br>
         <!-- placeholder_data_inicio_contribuicoes -->
-<span style="font-size: 12px;">📅&nbsp;2024-01-07 - Present</span>
+<span style="font-size: 12px;">📅&nbsp;2024-01-14 - Present</span>
       </td>
       <td align="center" style="padding: 10px;">
         <!-- placeholder_streak_atual -->
